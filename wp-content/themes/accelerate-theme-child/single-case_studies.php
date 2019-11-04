@@ -34,14 +34,7 @@ get_header(); ?>
             <h2><?php the_title();?></h2>
             <h5><?php echo $services;?></h5>
             <h6><?php echo $client; ?></h6>
-            <p>Here is some copy about what I did. Nothing important to see here. 
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
-                deserunt mollit anim id est laborum.</p>
+            <p>This is a project I made for this company. Here is the early stage startup that I helped design and do front-end and back-end development for.</p>
 
 </aside>
 <div class="case-study-images">
