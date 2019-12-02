@@ -17,6 +17,18 @@ function accelerate_child_scripts(){
 }
 add_action( 'wp_enqueue_scripts', 'accelerate_child_scripts' );
 
+// Add Font Awesome in WordPress Theme
+add_action ('wp_enqueue_scripts', 'font_awesome_script');
+function font_awesome_script(){
+    wp_enqueue_script('fontawesome-script', 'https://kit.fontawesome.com/5941224b06.js', array(), NULL, true);
+};
+
+function theme_setup (){
+//Add support for featured images
+add_theme_support('post-thumbnails');
+}
+add_action('after_setup_theme','theme_setup');
+
 function create_custom_post_types() {
     register_post_type( 'case_studies',
         array(
@@ -29,5 +41,20 @@ function create_custom_post_types() {
             'rewrite' => array( 'slug' => 'case-studies' ),
         )
     );
+    register_post_type('services',
+    array (
+        'labels' => array (
+            'name' => __('Services'),
+            'singular_name' => __('Service' )           
+        ),
+        'public' => true,
+        'has_archive' => false,
+        'rewrite' => array( 'slug' => 'services'),
+        'supports' =>array ('title', 'thumbnail', 'editor','page attributes'),
+    )
+    
+    );
+
+
 }
 add_action( 'init', 'create_custom_post_types' );

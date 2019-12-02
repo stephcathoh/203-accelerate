@@ -3,7 +3,7 @@
 /**
  * The template for displaying case studies.
  *
- * This is the template that displays all pages by default.
+ * It is based on the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages
  * and that other 'pages' on your WordPress site will use a
  * different template.
@@ -50,11 +50,15 @@ get_header(); ?>
 </article>
 
             <?php the_content(); ?>
+
+            
+            <nav id="navigation" class="container">
+            <div class="left"><a href="<?php echo site_url('case-studies') ?>">&larr; <span>Back to work</span></a></div>
+        </nav>
             
 			<?php endwhile; // end of the loop. ?>
 		</div><!-- .main-content -->
 
-		
 
 	</div><!-- #primary -->
 
